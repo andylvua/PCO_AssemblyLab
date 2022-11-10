@@ -1,5 +1,5 @@
-FUNC_1_DIR = ./Task_2
-FUNC_2_DIR = ./Task_7
+FUNC_1_DIR = ./func_1
+FUNC_2_DIR = ./func_2
 
 all:
 	$(MAKE) -C $(FUNC_1_DIR)
