@@ -41,7 +41,8 @@ print:
     sub rsp, 16
     ; Save R12
     mov [rbp-16], R12
-    ; Loop through the array and print each element. Set counter to 0 (xor
+    ; Loop through the array and print each element. Set counter to 0 (using xor).
+    ; R12 is used since it is a callee-saved register. printf allowed to change all scratch registers.
     xor R12, R12
     ForLoop:
         ; If the counter is greater than the length of the array, break
