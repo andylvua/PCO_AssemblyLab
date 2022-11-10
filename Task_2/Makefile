@@ -30,7 +30,7 @@ call_from_a: call_from_a.o sort.o
 	${CXX} $^ -o $@ -c
 
 %.o: %.asm
-	INCLUDE=${CURDIR}/x86/include ${FASM} $<
+	INCLUDE=${CURDIR}/../x86/include ${FASM} $<
 
 .PHONY: clean
 clean:
