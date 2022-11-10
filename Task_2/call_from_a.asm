@@ -38,7 +38,11 @@ print:
     push rbp
     mov rbp, rsp
 
-    ; Loop through the array and print each element. Set counter to 0
+    ; Align the stack to 16 bytes for the printf function
+    sub rsp, 16
+    ; Save R12
+    mov [rbp-16], R12
+    ; Loop through the array and print each element. Set counter to 0 (xor
     mov R12, 0
     For:
         ; If the counter is greater than the length of the array, break
@@ -59,6 +63,9 @@ print:
         lea RDI, [nln]
         call printf
 
+        ; Restore R12
+        add rsp, 16
+        mov R12, [rbp-16]
         ; Restore the stack pointer to the base pointer and return
         pop rbp
         ret
