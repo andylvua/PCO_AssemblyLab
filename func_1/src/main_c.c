@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void func (int32_t* array, size_t size);
+void func(int32_t *array, size_t size);
 
 int main() {
     size_t size = 15;
