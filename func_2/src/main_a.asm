@@ -51,6 +51,8 @@ print:
 
         ; Call printf to print the element satisfying the calling convention
         lea RDI, [msg]
+        ; Set number of XMMx registers to print
+        mov RAX, 3
         movss XMM0, [a_coef + 4*R12]
         movss XMM1, [b_coef + 4*R12]
         movss XMM2, [result + 4*R12]
