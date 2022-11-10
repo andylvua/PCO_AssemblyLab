@@ -7,9 +7,9 @@ format ELF64
 section '.text'
 
 ; Define public function
-public solve_equation
+public func
 
-solve_equation:
+func:
     ; According to Linux Calling Convention arguments are passed in registers as follows:
     ; RDI, RSI, RDX, RCX, R8, R9
 

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "solve.h"
 
+void func(float *a, float *b, float *x, size_t size);
 
 int main(){
     size_t size = 15;
@@ -14,7 +14,7 @@ int main(){
         b_coef[i] = i + 1;
     }
 
-    solve_equation(a_coef, b_coef, result, size);
+    func(a_coef, b_coef, result, size);
 
     for (int i = 0; i < size; ++i) {
         printf("%f*x + %f = 0,  x = %f\n", a_coef[i], b_coef[i], result[i]);

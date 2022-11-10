@@ -9,7 +9,7 @@ section '.text' executable
 ; Define public function
 public main
 ; Include the external sorting function and printf
-extrn insertion_sort
+extrn func
 extrn printf
 
 main:
@@ -24,7 +24,7 @@ main:
     ; Call the sorting function satisfying the calling convention
     lea RDI, [arr] ; Set the first argument to the address of the array in RDI
     mov RSI, [len] ; Set the second argument to the length of the array in RSI
-    call insertion_sort
+    call func
 
     ; Print the array after sorting
     call print

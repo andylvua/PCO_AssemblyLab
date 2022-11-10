@@ -7,9 +7,9 @@ format ELF64
 section '.text'
 
 ; Define public function
-public insertion_sort
+public func
 
-insertion_sort:
+func:
     ; According to Linux Calling Convention arguments are passed in registers as follows:
     ; RDI, RSI, RDX, RCX, R8, R9
     ; Since function is defined as <func(int_64_t* input_array, size_t size)>

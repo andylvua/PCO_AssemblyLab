@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "sort.h"
+
+void func (int32_t* array, size_t size);
 
 int main() {
     size_t size = 15;
@@ -19,7 +20,7 @@ int main() {
     }
     printf("\n");
 
-    insertion_sort(input, size);
+    func(input, size);
 
     printf("Sorted array: \n");
     for (int i = 0; i < size; ++i) {

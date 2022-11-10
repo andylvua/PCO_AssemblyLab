@@ -9,7 +9,7 @@ section '.text' executable
 ; Define public function
 public main
 ; Include the external sorting function and printf
-extrn solve_equation
+extrn func
 extrn printf
 
 main:
@@ -23,7 +23,7 @@ main:
     lea RSI, [b_coef] ; Set the second argument to the address of b_coef
     lea RDX, [result] ; Set the third argument to the address of result
     mov RCX, [len] ; Set the fourth argument to the length of the arrays
-    call solve_equation
+    call func
 
     ; Print the result
     call print
