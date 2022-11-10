@@ -17,11 +17,10 @@ int main(){
     solve_equation(a_coef, b_coef, result, size);
 
     for (int i = 0; i < size; ++i) {
-        printf("%f * x + %f = 0,  x = %f\n", a_coef[i], b_coef[i], result[i]);
+        printf("%f*x + %f = 0,  x = %f\n", a_coef[i], b_coef[i], result[i]);
     }
 
     free(a_coef);
     free(b_coef);
     free(result);
 }
-
