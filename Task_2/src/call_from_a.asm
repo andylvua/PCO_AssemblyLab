@@ -63,6 +63,8 @@ print:
         lea RDI, [nln]
         call printf
 
+        ; Clear RDI
+        xor RDI, RDI
         ; Restore R12
         add rsp, 16
         mov R12, [rbp-16]
@@ -80,5 +82,5 @@ arr dd -9, 15, 51, 14, -23, 9, 34, 5, -7, 12, 19, -24, 60, -1, 7
 len dq 15
 
 ; Define the message to be printed
-msg db "%d", ' ', 0
+msg db "%d ", 0
 nln db 0xA, 0 ; newline

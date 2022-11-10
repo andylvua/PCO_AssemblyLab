@@ -65,6 +65,8 @@ print:
         inc R12
         jmp ForLoop
     EndOfForLoop:
+        ; Clear RDI
+        xor RDI, RDI
         ; Restore R12
         add rsp, 16
         mov R12, [rbp-16]
