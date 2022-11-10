@@ -23,8 +23,8 @@ solve_equation:
     ; XMM1 - b[i]
     ; XMM2 - -1
 
-    ; Initialize R8 to 1 (i = 1)
-    mov R8, 0
+    ; Initialize R8 to 0 (i = 0)
+    xor R8, R8
     ; Initialize XMM2 to -1
     movss XMM2, [minus]
     ForLoop:
