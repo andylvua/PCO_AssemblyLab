@@ -43,7 +43,7 @@ print:
     ; Save R12
     mov [rbp-16], R12
     ; Loop through the array and print each element. Set counter to 0 (xor
-    mov R12, 0
+    xor R12, R12
     For:
         ; If the counter is greater than the length of the array, break
         cmp R12, [len] ; compare counter with size of array
