@@ -46,7 +46,7 @@ print:
     xor R12, R12
     For:
         ; If the counter is greater than the length of the array, break
-        cmp R12, [len] ; compare counter with size of array
+        cmp R12, [len]
         jge EndFor
 
         ; Call printf to print the element satisfying the calling convention
