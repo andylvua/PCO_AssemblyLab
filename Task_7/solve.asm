@@ -30,7 +30,7 @@ solve_equation:
     ForLoop:
         ; Check if i < size
         cmp R8, RCX
-        jg EndOfForLoop
+        jge EndOfForLoop
 
         ; Move a[i] to XMM0 as 32-bit floating point
         movss XMM0, [RDI + 4*R8]
