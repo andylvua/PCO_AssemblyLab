@@ -50,7 +50,7 @@ insertion_sort:
         dec R9
         WhileLoop:
             ; Check if j >= 0
-            cmp R9, 0
+            test R9, R9
             jl EndOfWhileLoop
 
             ; Check if input_array[j] > key
