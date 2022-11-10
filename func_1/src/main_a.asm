@@ -30,7 +30,7 @@ main:
     call print
 
     ; Restore the stack pointer to the base pointer and return
-    pop rbp
+    leave
     ret
 
 ; Print the array
@@ -70,7 +70,7 @@ print:
         add rsp, 16
         mov R12, [rbp-16]
         ; Restore the stack pointer to the base pointer and return
-        pop rbp
+        leave
         ret
 
 
